@@ -36,3 +36,30 @@
     transform: rotate(360deg);
   }
 }
+
+/* Add these styles to your existing CSS */
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px; /* Adjust this value to position the line below the text */
+  left: 0;
+  width: 0;
+  height: 2px; /* Adjust this value to control the line thickness */
+  background-color: #2b447e; /* Change this color to match your design */
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #2b447e; /* Change this color to match your design */
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
